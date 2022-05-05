@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script2.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator-grid">
+        <div class="output">
+          <div data-previous-operand class="previous-operand"></div>
+          <div data-current-operand class="current-operand"></div>
+          <!-- Give data attributes to all our numbers, operators and operands as selectors to be used only by Javascript -->
+        </div>
+        <button data-all-clear class="operator" id='C'>C</button>
+        <button data-all-clear class="operator" id='AC'>AC</button>
+        <button data-delete class='operator' id= delete'>DEL</button>
+        <button data-operation class='operator' id='divide'>÷</button>
+        <button data-number class='number' id ='1'>1</button>
+        <button data-number class ='number' id ='2'>2</button>
+        <button data-number class='number' id ='3'>3</button>
+        <button data-operation class= 'operator' id ='multiply'>*</button>
+        <button data-number class='number' id ='4'>4</button>
+        <button data-number class='number' id ='5'>5</button>
+        <button data-number class='number' id ='6'>6</button>
+        <button data-operation class= 'operator'id ='plus'>+</button>
+        <button data-number class='number'id ='7'>7</button>
+        <button data-number class='number'id ='8'>8</button>
+        <button data-number class='number'id ='9'>9</button>
+        <button data-operation class='operator'id ='minus'>-</button>
+        <button data-number class='number'id ='empty-before-zero'></button>
+        <button data-number class='number'id ='0'>0</button>
+        <button data-number class='number span-two' id ='dot' >.</button>
+        <button data-equals class='span-two'>=</button>
+        <!-- <button class='span-two'></button> -->
+      </div>
+    </div>
+  </body>
+</html>

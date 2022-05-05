@@ -1,0 +1,136 @@
+*,
+::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: lightblue;
+
+  /* background-image:url('https://images.unsplash.com/photo-1553532434-5ab5b6b84993?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTB8fGdlb21ldHJpYyUyMHBhdHRlcm58ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+.container {
+  width: 800px;
+  height: 750px;
+  background-image: url("https://images.unsplash.com/photo-1553532434-5ab5b6b84993?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTB8fGdlb21ldHJpYyUyMHBhdHRlcm58ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  margin: 20px auto;
+
+  background-size: cover;
+  padding: 50px 10px;
+}
+
+/* .calculator{
+    width:320px;
+    height:500px;
+    background-color: cornsilk;
+    margin: 0 auto;
+    top:20px;
+    position:relative;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0,2) 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color:black;
+} */
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 600px;
+  min-height: 80vh;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 80px);
+  grid-gap: 8px;
+  width: fit-content;
+  background-color: whitesmoke;
+  margin: 0 auto;
+}
+
+button {
+  margin: 5px 5px;
+}
+
+#dot {
+  font-size: 3rem;
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px slid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.calculator-grid > button:hover {
+  background-color: rgba(51, 47, 47, 0.9);
+}
+
+.calculator-grid > button:active {
+  font-size: 0.5 rem;
+}
+.calculator-grid > button:nth-child(5) {
+  font-size: 2rem;
+  background-color: #0000ff;
+}
+button:nth-child(9) {
+  font-size: 2rem;
+  background-color: #ff6347;
+}
+button:nth-child(13) {
+  font-size: 2rem;
+  background-color: #ffff00;
+}
+button:nth-child(17) {
+  font-size: 2rem;
+  background-color: #ee82ee;
+}
+button:nth-child(21) {
+  font-size: 2rem;
+  background-color: #adff2f;
+}
+
+/* make the AC and '==' span two columns */
+/* .span-two {
+  grid-column: span 2;
+} */
+
+/* style the output */
+/* grid going from 1 to -1 means go from first(1) to last column (-1) */
+/* flex-direction column makes the content align vertically */
+/* word-wrap break words in the middle and word-break makes long numbers wrap to next line */
+
+.output {
+  grid-column: 1/ -1;
+  background-color: rgba(0, 0, 0, 0.822);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 0px;
+  margin-top: -20px;
+  margin-bottom: -5px;
+  word-wrap: break-word;
+  word-break: break-all;
+  height: 90px;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
+.number,
+.operator {
+  border-radius: 50%;
+  border-width: 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
